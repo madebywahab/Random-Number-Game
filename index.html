@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div class="container">
+        <h1>Random Number Guess</h1>
+        <input type="text" class="inputArea">
+        <button class="btnSubmit">
+            check
+        </button>
+        <h2></h2>
+        <h3></h3>
+    </div>
+
+
+</body>
+<script>
+   const inputArea = document.querySelector('.inputArea');
+   const btnSubmit = document.querySelector('.btnSubmit');
+   const randomNumber =  Math.floor(Math.random() * 20); 
+
+    // document.querySelector('h2').textContent =  randomNumber ;
+
+
+   btnSubmit.addEventListener('click', function(){
+     
+    if (Number(inputArea.value) === randomNumber){
+            console.log(document.querySelector('h3').textContent = `You win: ${  inputArea.value}`);
+        // document.querySelector('h3').textContent =   "Great";    
+    //    return   `You Win and the Number is: ${}`
+
+    }else{
+        inputArea.value > randomNumber   ? document.querySelector('h3').textContent = "Too High" : document.querySelector('h3').textContent = "Too Low"; 
+        // document.querySelector('h3').textContent =   "Wrong Number";
+    }
+   
+
+});
+
+    
+</script>
+</html>
